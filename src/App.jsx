@@ -14,8 +14,8 @@ import {
 } from 'lucide-react'
 
 const navItems = {
-  id: [['Cara kerja', 'how-it-works'], ['Untuk perusahaan', 'employers'], ['Dampak kami', 'impact'], ['Tentang kami', 'about']],
-  en: [['How it works', 'how-it-works'], ['For employers', 'employers'], ['Our impact', 'impact'], ['About us', 'about']],
+  id: [['Cara kerja', 'how-it-works'], ['Untuk perusahaan', 'employers'], ['Dampak kami', 'impact']],
+  en: [['How it works', 'how-it-works'], ['For employers', 'employers'], ['Our impact', 'impact']],
 }
 
 const english = {
@@ -65,21 +65,15 @@ const english = {
   'Kurangi tekanan finansial dan bangun tim yang lebih fokus, produktif, dan loyal.': 'Reduce financial stress and build a more focused, productive and loyal workforce.',
   'Dibangun untuk': 'Built for the',
   'dunia kerja.': 'working world.',
-  'Dari tim yang sedang berkembang hingga perusahaan regional, GetPaid membantu bisnis menciptakan pengalaman kerja yang lebih baik.': 'From growing teams to regional enterprises, GetPaid is helping businesses create a stronger employee experience.',
+  'Dari tim yang sedang berkembang hingga perusahaan besar, GetPaid membantu bisnis menciptakan pengalaman kerja yang lebih baik.': 'From growing teams to large enterprises, GetPaid is helping businesses create a stronger employee experience.',
   'Klien perusahaan': 'Enterprise clients',
   'US$': '$',
   '18 jt': '18m',
   'Gaji yang dikelola': 'Salaries under management',
-  'Negara di Asia Tenggara': 'Countries across Southeast Asia',
   'Saya bisa menangani tagihan tak terduga tanpa berutang atau menunggu sampai akhir bulan.': 'I can handle unexpected bills without borrowing or waiting until the end of the month.',
   'Staf Administrasi': 'Admin Executive',
   'GetPaid memberi saya jaring pengaman yang praktis. Keuangan lebih terkendali dan saya lebih tenang saat bekerja.': 'GetPaid gave me a simple safety net. I feel more in control of my finances and less stressed at work.',
   'Staf Pemasaran': 'Marketing Executive',
-  'Dibuat untuk Asia Tenggara': 'Made for Southeast Asia',
-  'Pemahaman lokal.': 'Local understanding.',
-  'Ambisi regional.': 'Regional ambition.',
-  'Singapura': 'Singapore',
-  'Filipina': 'Philippines',
   'Gajian kapan saja': 'Your pay, on your time',
   'Siap membuat hari gajian': 'Ready to make payday',
   'jadi lebih baik?': 'work better?',
@@ -87,7 +81,6 @@ const english = {
   'Bicara dengan tim kami': 'Talk to our team',
   'Kesejahteraan finansial untuk semua melalui akses gaji fleksibel.': 'Financial wellbeing for all, through earned wage access.',
   'Jelajahi': 'Explore',
-  'Lokasi': 'Locations',
   'Dapatkan kabar terbaru': 'Stay in the loop',
   '© 2026 GetPaid. Hak cipta dilindungi.': '© 2026 GetPaid. All rights reserved.',
   'Privasi · Ketentuan': 'Privacy · Terms',
@@ -307,25 +300,14 @@ function App() {
           <div className="page-shell">
             <div className="section-heading split-heading impact-heading">
               <div><h2>Dibangun untuk<br />dunia kerja.</h2></div>
-              <p>Dari tim yang sedang berkembang hingga perusahaan regional, GetPaid membantu bisnis menciptakan pengalaman kerja yang lebih baik.</p>
+              <p>Dari tim yang sedang berkembang hingga perusahaan besar, GetPaid membantu bisnis menciptakan pengalaman kerja yang lebih baik.</p>
             </div>
             <div className="stats-grid">
               <div><strong>60<span>+</span></strong><p>Klien perusahaan</p></div>
               <div><strong><span>US$</span>18 jt</strong><p>Gaji yang dikelola</p></div>
-              <div><strong>3</strong><p>Negara di Asia Tenggara</p></div>
             </div>
             <div className="testimonial-grid">
               {testimonials.map((item, i) => <article key={item.name}><div className="quote-mark">“</div><blockquote>{item.quote}</blockquote><footer><span className={`person person-${i}`}>{item.initials}</span><div><strong>{item.name}</strong><span>{item.role}</span></div></footer></article>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="regions section" id="about">
-          <div className="page-shell region-shell">
-            <div><span className="kicker">Dibuat untuk Asia Tenggara</span><h2>Pemahaman lokal.<br />Ambisi regional.</h2></div>
-            <div className="region-map">
-              <div className="map-shape"><Globe2 /></div>
-              <span className="pin pin-sg">Singapura</span><span className="pin pin-id">Indonesia</span><span className="pin pin-ph">Filipina</span>
             </div>
           </div>
         </section>
@@ -341,9 +323,8 @@ function App() {
       </main>
       <footer className="site-footer">
         <div className="page-shell footer-grid">
-          <div className="footer-brand"><Brand light language={language} /><p>Kesejahteraan finansial untuk semua melalui akses gaji fleksibel.</p><a href="mailto:admin@getpaid.id">admin@getpaid.id</a></div>
+          <div className="footer-brand"><Brand light language={language} /><p className="footer-company">PT Digital Gaji Asia</p><p>Kesejahteraan finansial untuk semua melalui akses gaji fleksibel.</p><a href="mailto:admin@getpaid.id">admin@getpaid.id</a></div>
           <div><h4>Jelajahi</h4>{navItems[language].slice(0, 3).map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}</div>
-          <div><h4>Lokasi</h4><span>Singapura</span><span>Indonesia</span><span>Filipina</span></div>
           <div><h4>Dapatkan kabar terbaru</h4><form onSubmit={(e) => e.preventDefault()}><input type="email" aria-label={language === 'id' ? 'Alamat email' : 'Email address'} placeholder={language === 'id' ? 'Alamat email Anda' : 'Your email address'} /><button aria-label={language === 'id' ? 'Berlangganan' : 'Subscribe'}><ArrowRight size={17} /></button></form></div>
         </div>
         <div className="page-shell footer-bottom"><span>© 2026 GetPaid. Hak cipta dilindungi.</span><span>Privasi · Ketentuan</span></div>
