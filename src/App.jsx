@@ -19,7 +19,6 @@ const navItems = {
 }
 
 const english = {
-  'Kesejahteraan finansial untuk semua': 'Financial wellbeing, built for everyone',
   'Gajimu.': 'Your money.',
   'Waktumu.': 'Your moment.',
   'Berikan karyawan akses ke gaji yang sudah mereka peroleh—kapan pun dibutuhkan. Tanpa biaya bagi perusahaan, dengan rasa tenang yang berarti bagi tim.': 'Give your people access to the pay they’ve already earned—whenever they need it. Zero cost to employers, priceless peace of mind for teams.',
@@ -227,7 +226,6 @@ function App() {
         <section className="hero" id="top">
           <div className="hero-grid page-shell">
             <div className="hero-copy">
-              <div className="eyebrow"><span /> Kesejahteraan finansial untuk semua</div>
               <h1>Gajimu.<br /><em>Waktumu.</em></h1>
               <p className="hero-lead">Berikan karyawan akses ke gaji yang sudah mereka peroleh—kapan pun dibutuhkan. Tanpa biaya bagi perusahaan, dengan rasa tenang yang berarti bagi tim.</p>
               <div className="hero-actions">
