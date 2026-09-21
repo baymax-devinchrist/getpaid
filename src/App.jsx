@@ -25,7 +25,7 @@ const english = {
   'Berikan karyawan akses ke gaji yang sudah mereka peroleh—kapan pun dibutuhkan. Tanpa biaya bagi perusahaan, dengan rasa tenang yang berarti bagi tim.': 'Give your people access to the pay they’ve already earned—whenever they need it. Zero cost to employers, priceless peace of mind for teams.',
   'Hadirkan GetPaid di perusahaan': 'Bring GetPaid to your team',
   'Lihat cara kerjanya': 'See how it works',
-  '60+ perusahaan': '60+ enterprises',
+  '30+ perusahaan': '30+ enterprises',
   'telah mengutamakan kesejahteraan karyawan': 'already putting people first',
   'BUKAN PINJAMAN': 'NO LOANS',
   'TANPA BUNGA': 'NO INTEREST',
@@ -67,9 +67,6 @@ const english = {
   'dunia kerja.': 'working world.',
   'Dari tim yang sedang berkembang hingga perusahaan besar, GetPaid membantu bisnis menciptakan pengalaman kerja yang lebih baik.': 'From growing teams to large enterprises, GetPaid is helping businesses create a stronger employee experience.',
   'Klien perusahaan': 'Enterprise clients',
-  'US$': '$',
-  '18 jt': '18m',
-  'Gaji yang dikelola': 'Salaries under management',
   'Saya bisa menangani tagihan tak terduga tanpa berutang atau menunggu sampai akhir bulan.': 'I can handle unexpected bills without borrowing or waiting until the end of the month.',
   'Staf Administrasi': 'Admin Executive',
   'GetPaid memberi saya jaring pengaman yang praktis. Keuangan lebih terkendali dan saya lebih tenang saat bekerja.': 'GetPaid gave me a simple safety net. I feel more in control of my finances and less stressed at work.',
@@ -121,15 +118,13 @@ const benefits = [
 const testimonials = [
   {
     quote: 'Saya bisa menangani tagihan tak terduga tanpa berutang atau menunggu sampai akhir bulan.',
-    name: 'Anne',
+    name: 'Sari',
     role: 'Staf Administrasi',
-    initials: 'AN',
   },
   {
     quote: 'GetPaid memberi saya jaring pengaman yang praktis. Keuangan lebih terkendali dan saya lebih tenang saat bekerja.',
-    name: 'John',
+    name: 'Budi',
     role: 'Staf Pemasaran',
-    initials: 'JO',
   },
 ]
 
@@ -239,7 +234,7 @@ function App() {
                 <a className="button" href="#connect">Hadirkan GetPaid di perusahaan <ArrowRight size={18} /></a>
                 <a className="text-link" href="#how-it-works">Lihat cara kerjanya <span>↓</span></a>
               </div>
-              <div className="hero-note"><span className="avatars"><i>AN</i><i>JO</i><i>+</i></span><strong>60+ perusahaan</strong> telah mengutamakan kesejahteraan karyawan</div>
+              <div className="hero-note"><BadgeCheck size={20} aria-hidden="true" /><strong>30+ perusahaan</strong> telah mengutamakan kesejahteraan karyawan</div>
             </div>
             <PayCard language={language} />
           </div>
@@ -302,12 +297,11 @@ function App() {
               <div><h2>Dibangun untuk<br />dunia kerja.</h2></div>
               <p>Dari tim yang sedang berkembang hingga perusahaan besar, GetPaid membantu bisnis menciptakan pengalaman kerja yang lebih baik.</p>
             </div>
-            <div className="stats-grid">
-              <div><strong>60<span>+</span></strong><p>Klien perusahaan</p></div>
-              <div><strong><span>US$</span>18 jt</strong><p>Gaji yang dikelola</p></div>
+            <div className="impact-proof">
+              <div><strong>30<span>+</span></strong><p>Klien perusahaan</p></div>
             </div>
             <div className="testimonial-grid">
-              {testimonials.map((item, i) => <article key={item.name}><div className="quote-mark">“</div><blockquote>{item.quote}</blockquote><footer><span className={`person person-${i}`}>{item.initials}</span><div><strong>{item.name}</strong><span>{item.role}</span></div></footer></article>)}
+              {testimonials.map((item) => <article key={item.name}><div className="quote-mark">“</div><blockquote>{item.quote}</blockquote><footer><div><strong>{item.name}</strong><span>{item.role}</span></div></footer></article>)}
             </div>
           </div>
         </section>
